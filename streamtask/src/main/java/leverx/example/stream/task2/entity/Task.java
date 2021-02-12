@@ -1,4 +1,4 @@
-package leverx.example.stream.task2;
+package leverx.example.stream.task2.entity;
 
 import lombok.Data;
 
@@ -18,7 +18,7 @@ public class Task {
 
 
     public Task addTag(String tagName) {
-        this.tags.add(tagName);
+        tags.add(tagName);
         return this;
     }
 }

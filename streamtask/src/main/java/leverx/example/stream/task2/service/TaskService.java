@@ -1,4 +1,6 @@
-package leverx.example.stream.task2;
+package leverx.example.stream.task2.service;
+
+import leverx.example.stream.task2.entity.Task;
 
 import java.util.Comparator;
 import java.util.List;

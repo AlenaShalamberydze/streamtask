@@ -1,6 +1,6 @@
-package leverx.example.stream.task3;
+package leverx.example.stream.task3.dto;
 
-import leverx.example.stream.task2.TaskType;
+import leverx.example.stream.task2.entity.TaskType;
 import lombok.Data;
 
 import java.time.LocalDate;

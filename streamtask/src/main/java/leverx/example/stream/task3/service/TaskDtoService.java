@@ -1,6 +1,7 @@
-package leverx.example.stream.task3;
+package leverx.example.stream.task3.service;
 
-import leverx.example.stream.task2.Task;
+import leverx.example.stream.task2.entity.Task;
+import leverx.example.stream.task3.dto.TaskDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

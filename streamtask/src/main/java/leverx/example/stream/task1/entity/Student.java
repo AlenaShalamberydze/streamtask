@@ -1,4 +1,4 @@
-package leverx.example.stream.task1;
+package leverx.example.stream.task1.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 @AllArgsConstructor
 @Data
-class Student {
+public class Student {
 
     private Map<String, Integer> rating;
     private String name;

@@ -1,11 +1,14 @@
-package leverx.example.stream.task2;
+package leverx.example.stream.task2.service;
+
+import leverx.example.stream.task2.entity.TaskType;
+import leverx.example.stream.task2.entity.Task;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
 import java.util.List;
 
-public class TaskBuilder {
+public class TaskServiceBuilder {
 
     public List<Task> createTaskList() {
         Task task1 = new Task("Read Version Control with Git book",

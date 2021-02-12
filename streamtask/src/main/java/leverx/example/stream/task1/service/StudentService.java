@@ -1,4 +1,6 @@
-package leverx.example.stream.task1;
+package leverx.example.stream.task1.service;
+
+import leverx.example.stream.task1.entity.Student;
 
 import java.util.List;
 
