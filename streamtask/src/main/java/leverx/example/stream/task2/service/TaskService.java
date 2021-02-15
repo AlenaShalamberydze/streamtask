@@ -20,14 +20,13 @@ public class TaskService {
                 .collect(Collectors.joining(", "));
     }
 
-    public static Map<String,
-            Map<TaskType, Map<LocalDate, Map<Set<String>, List<Task>>>>> groupTasksByParameters(List<Task> tasks) {
+    public static Map<Object, List<Task>> groupTasksByParameters(List<Task> tasks){
         return tasks.stream()
-                .collect(Collectors.groupingBy(Task::getTitle,
-                        Collectors.groupingBy(Task::getType,
-                                Collectors.groupingBy(Task::getCreatedOn,
-                                        Collectors.groupingBy(Task::getTags)))));
-
+                .collect(Collectors.groupingBy(task -> List. of(
+                        task.getTitle(),
+                        task.getType(),
+                        task.getCreatedOn(),
+                        task.getTags())));
     }
 
 }

@@ -12,7 +12,6 @@ public class TaskSearchApp {
         List<Task> tasks = createTaskList();
 
         System.out.println(filterTaskListByDate(tasks, 6));
-
         System.out.println(groupTasksByParameters(tasks));
     }
 

@@ -21,15 +21,14 @@ public class StudentService {
 
         List<String> rating = new ArrayList<>();
 
-        for (String subject : getAllSubjects(students)) {
+        getAllSubjects(students).forEach(subject -> {
             String subjectRating = students.stream()
                     .filter(student -> student.getRating().containsKey(subject))
                     .map(student -> student.getName() + " : "
                             + student.getRating().get(subject).toString())
                     .collect(Collectors.joining(", "));
-
             rating.add(subject.toUpperCase() + ": (" + subjectRating + ")");
-        }
+        });
 
         return rating;
     }
