@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
+import static java.util.stream.Collectors.joining;
 
 public class StudentService {
 
@@ -26,7 +26,7 @@ public class StudentService {
                     .filter(student -> student.getRating().containsKey(subject))
                     .map(student -> student.getName() + " : "
                             + student.getRating().get(subject).toString())
-                    .collect(Collectors.joining(", "));
+                    .collect(joining(", "));
             rating.add(subject.toUpperCase() + ": (" + subjectRating + ")");
         });
 
