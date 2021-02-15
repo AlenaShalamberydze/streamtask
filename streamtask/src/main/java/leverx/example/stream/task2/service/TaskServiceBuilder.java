@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TaskServiceBuilder {
 
-    public List<Task> createTaskList() {
+    public static List<Task> createTaskList() {
         Task task1 = new Task("Read Version Control with Git book",
                 TaskType.READING,
                 LocalDate.of(2015, Month.JULY, 1))

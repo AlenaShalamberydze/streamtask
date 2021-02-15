@@ -1,14 +1,12 @@
 package leverx.example.stream.task2;
 
-import leverx.example.stream.task2.service.TaskService;
-import leverx.example.stream.task2.service.TaskServiceBuilder;
+import static leverx.example.stream.task2.service.TaskService.filterTaskListByDate;
+import static leverx.example.stream.task2.service.TaskServiceBuilder.createTaskList;
 
 public class TaskSearchApp {
     public static void main(String[] args) {
-        TaskServiceBuilder builder = new TaskServiceBuilder();
-        TaskService service = new TaskService();
 
-        System.out.println(service.filterTaskListByDate(builder.createTaskList(), 6));
+        System.out.println(filterTaskListByDate(createTaskList(), 6));
     }
 
 }

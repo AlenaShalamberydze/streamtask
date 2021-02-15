@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class TaskService {
 
-    public String filterTaskListByDate(List<Task> tasks, int amount) {
+    public static String filterTaskListByDate(List<Task> tasks, int amount) {
         return tasks.stream()
                 .limit(amount)
                 .sorted(Comparator.comparing(Task::getCreatedOn))

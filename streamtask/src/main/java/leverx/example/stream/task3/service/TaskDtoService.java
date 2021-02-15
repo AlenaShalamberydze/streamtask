@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class TaskDtoService {
 
-    public List<TaskDto> convert(List<Task> tasks) {
+    public static List<TaskDto> convert(List<Task> tasks) {
         return tasks.stream()
                 .map(task -> new TaskDto(task.getTitle(), task.getType(), task.getCreatedOn()))
                 .collect(Collectors.toList());
