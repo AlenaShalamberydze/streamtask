@@ -9,7 +9,7 @@ public class AverageMarkApp {
         StudentService service = new StudentService();
         String subject = "Physics";
 
-        System.out.println(service.averageMark(builder.createStudentList(), subject));
+        System.out.println(service.countAverageMark(builder.createStudentList(), subject));
     }
 
 }
