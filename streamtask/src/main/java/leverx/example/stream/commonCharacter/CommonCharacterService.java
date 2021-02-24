@@ -7,22 +7,26 @@ import static java.util.Map.Entry.comparingByValue;
 
 public class CommonCharacterService {
 
+    private static Map<Character, Integer> chars;
+
     public static Map.Entry<Character, Integer> countMostCommonCharacter(String string) {
-        Map<Character, Integer> chars = getCharsMapFromString(string);
+        chars = getCharsMapFromString(string);
         return chars.entrySet().stream()
                 .max(comparingByValue()).orElse(null);
     }
 
     private static Map<Character, Integer> getCharsMapFromString(String string) {
-        Map<Character, Integer> chars = new HashMap<>();
+        chars = new HashMap<>();
         string.chars()
                 .mapToObj(characters -> (char) characters)
-                .forEach(character -> {
-                    chars.put(character, chars.containsKey(character)
-                            ? chars.get(character) + 1
-                            : 1);
-                });
+                .forEach(CommonCharacterService::fillCharsMap);
         return chars;
+    }
+
+    private static void fillCharsMap(char character) {
+        chars.put(character, chars.containsKey(character)
+                ? chars.get(character) + 1
+                : 1);
     }
 
 }
