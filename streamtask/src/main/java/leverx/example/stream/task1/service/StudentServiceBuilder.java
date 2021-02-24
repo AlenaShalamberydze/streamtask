@@ -2,7 +2,7 @@ package leverx.example.stream.task1.service;
 
 import leverx.example.stream.task1.entity.Student;
 
-import java.util.Arrays;
+import static java.util.Arrays.asList;
 import java.util.List;
 
 public class StudentServiceBuilder {
@@ -26,6 +26,6 @@ public class StudentServiceBuilder {
         Student student6 = new Student("Nikolay Sidorov")
                 .rate("Math", 8).rate("Economy", 5);
 
-        return Arrays.asList(student1, student2, student3, student4, student5, student6);
+        return asList(student1, student2, student3, student4, student5, student6);
     }
 }

@@ -10,7 +10,7 @@ import static java.util.stream.Collectors.joining;
 
 public class StudentService {
 
-    public static Double countAverageMark(List<Student> students, String subject) {
+    public static double countAverageMark(List<Student> students, String subject) {
         return students.stream()
                 .filter(student -> student.getRating().containsKey(subject))
                 .mapToInt(student -> student.getRating().get(subject))
